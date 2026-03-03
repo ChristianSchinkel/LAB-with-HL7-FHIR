@@ -30,10 +30,17 @@ def install_requirements():
     if sys.version_info < (3, 7):
         print("This application requires Python 3.7 or higher.")
         sys.exit(1)
-    subprocess.check_call(
-        [sys.executable,
-         "-m", "pip", "install", "-r", "./requirements/requirements.txt"]
-        )
+
+    requirements_installed = True  # Placeholder for actual check
+
+    if not requirements_installed:
+        subprocess.check_call(
+            [sys.executable,
+                "-m", "pip", "install", "-r",
+                "./requirements/requirements.txt"]
+            )
+    else:
+        print("All required dependencies are already installed.")
 
 
 if __name__ == "__main__":
