@@ -4,6 +4,11 @@ with HL7 FHIR integration."""
 
 def main():
     """The main function for the Health Informatics Lab application."""
+    initialize_application()
+
+
+def initialize_application():
+    """Initialize the Health Informatics Lab application."""
     print("Welcome to the Health Informatics Lab with HL7 FHIR integration!")
     # This function can be used to initialize the application
     # and set up any necessary configurations.
